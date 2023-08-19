@@ -1,0 +1,152 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css");
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*,
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--primary-font-family);
+}
+
+::-webkit-scrollbar {
+    /* width of the entire scrollbar */
+    width: 4px;
+    /* height of the entire scrollbar */
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    /* color of the tracking area */
+    background: var(--main-color);
+}
+
+::-webkit-scrollbar-thumb {
+    /* color of the scroll thumb */
+    background-color: var(--tertiary-color);
+    /* roundness of the scroll thumb */
+    border-radius: 20px;
+    /* creates padding around scroll thumb */
+    border: 3px solid var(--primary-500);
+}
+
+:root {
+    /* Primary Font Type */
+    --primary-font-family: 'Fira Sans', sans-serif;
+
+    /* Primary Theme  */
+    --primary-bg: #e6e0eb;
+    --primary-100: #D3E1FF;
+    --primary-200: #A6C4FE;
+    --primary-400: #7AA6FE;
+    --primary-400: #4E88FD;
+    --primary-500: #216BFD;
+    --primary-600: #0251EF;
+    --primary-700: #0242C3;
+    --primary-800: #023396;
+    --primary-900: #012369;
+
+     /* Gray Theme  */
+     --gray-50: #F9FAFB;
+     --gray-100: #F3F4F6;
+     --gray-200: #E5E7EB;
+     --gray-300: #D1D5DB;
+     --gray-400: #9CA3AF;
+     --gray-500: #6B7280;
+     --gray-600: #4B5563;
+     --gray-700: #374151;
+     --gray-800: #1F2937;
+     --gray-900: #111827;
+
+    /* Secondary Theme  */
+    --secondary-100: #FFDBD1;
+    --secondary-200: #FFDBD1;
+    --secondary-300: #FFCAB9;
+    --secondary-400: #FFB8A2;
+    --secondary-500: #FFA68B;
+    --secondary-600: #FF9474;
+    --secondary-700: #FF825C;
+    --secondary-800: #FF7145;
+    --secondary-900: #FF5C2C;
+
+     /* Yellow Scheme  */
+     --yellow-50: #FFFCE6;
+     --yellow-100: #FFF7CC;
+     --yellow-200: #FFF099;
+     --yellow-300: #FFE866;
+     --yellow-400: #FFE133;
+     --yellow-500: #FFD900;
+     --yellow-600: #BFA300;
+     --yellow-700: #806D00;
+     --yellow-800: #403600;
+     --yellow-900: #1A1600;
+
+    /* Error/Danger Theme  */
+    --error-50: #FCE7E8;
+    --error-100: #F7CED0;
+    --error-200: #EF9CA1;
+    --error-300: #E86B71;
+    --error-400: #E03942;
+    --error-500: #D80813;
+    --error-600: #A2060E;
+    --error-700: #6C040A;
+    --error-800: #360205;
+    --error-900: #160102;
+
+     /* Black Theme  */
+     --black-50: #E6E6E6;
+     --black-100: #CCCCCC;
+     --black-200: #999999;
+     --black-300: #666666;
+     --black-400: #333333;
+     --black-500: #000000;
+     --black-600: #000000;
+     --black-700: #000000;
+     --black-800: #000000;
+     --black-900: #000000;
+
+      /* White Theme  */
+    --white-50: #FFFFFF;
+    --white-100: #FFFFFF;
+    --white-200: #FFFFFF;
+    --white-300: #FFFFFF;
+    --white-400: #FFFFFF;
+    --white-500: #FFFFFF;
+    --white-600: #BFBFBF;
+    --white-700: #808080;
+    --white-800: #404040;
+    --white-900: #1A1A1A;
+
+    /* Elevations  */
+    --elevation-10: 0px 2px 2px #D9D9D9;
+    --elevation-1: 0px 1px 2px rgba(64, 141, 251, 0.05), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    --elevation-2: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15) ;
+    --elevation-3:0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3) ;
+    --elevation-4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+    --elevation-5:0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3) ;
+
+    --spacer: 30px;
+    --curve: 10;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-bottom: 0;
+}
+
+
+/* N Progress  */
+#nprogress .bar {
+    height: 5px;
+    background: var(--primary-900);
+}
+
+#nprogress .spinner-icon {
+    border-top-color: var(--primary-900);
+    border-left-color: var(--primary-900);
+    width: 30px;
+    height: 30px;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px var(--primary-900), 0 0 5px var(--secondary-900);
+}
