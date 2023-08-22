@@ -9,11 +9,11 @@ body {
 
 /* BUTTONS  */
 .primary-btn {
-    background-color: var(--primary-900);
+    background-color: var(--primary-color);
     /* background-color: red; */
-    border-radius: 5px;
-    text-transform: uppercase;
-    padding: 8px 20px;
+    border-radius: 6px;
+    text-transform: capitalize;
+    padding: 12px 20px;
     font-weight: 600;
     color: var(--white-50);
     font-size: 13px;
@@ -21,7 +21,7 @@ body {
 }
 
 .span-btn {
-    background-color: var(--primary-900);
+    background-color: var(--primary-color);
     border-radius: 5px;
     text-transform: uppercase;
     padding: 6px 14px;
@@ -32,14 +32,14 @@ body {
 }
 
 .outline-btn {
-    border: 1px solid var(--primary-900);
+    border: 1px solid var(--dark);
     background-color: var(--white-50);
-    padding: 12px 25px;
-    font-weight: 500;
-    font-size: 14px;
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 13px;
     border-radius: 8px;
-    text-transform: uppercase;
-    color: var(--primary-900);
+    text-transform: capitalize;
+    color: var(--dark);
 }
 
 .body-text {
@@ -81,7 +81,7 @@ body {
 
 
 .info-type.success {
-    background-color: var(--primary-500);
+    background-color: var(--primary-color);
 }
 
 .info-type.failed, .info-type.failure {
@@ -143,8 +143,8 @@ h1, h2, h3, h4, h5, h6, ul {
     width: 30px;
     height: 30px;
     display: block;
-    background-color: var(--primary-100);
-    color: var(--primary-500);
+    background-color: var(--secondary);
+    color: var(--primary-color);
     font-size: 20px;
     display: grid;
     display: -ms-grid;
@@ -212,26 +212,26 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .custom-card-tabs .nav-link.active {
-  color: var(--primary-900);
-  background-color: var(--primary-100);
-  border-bottom: 2px solid var(--primary-900);
+  color: var(--primary-color);
+  background-color: var(--secondary);
+  border-bottom: 2px solid var(--primary-color);
   padding: 10px 15px;
 }
 
 /* INPUT  */
 .input-field{
-    border: 1px solid var(--gray-400);
+    border: 1px solid var(--gray-300);
     display: flex;
     display: inline-flex;
     display: -webkit-flex;
-    padding: 0 5px;
+    padding: 0 8px 0 0 ;
     align-items: center;
     border-radius: 5px;
 }
 
-.input-field input {
+.input-field input[type=text], .input-field input[type=email], .input-field input[type=password] {
     width: 100%;
-    padding: 10px;
+    /* padding: 14px; */
     font-weight: 400;
     outline: none;
     border: none;
@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6, ul {
 
 .input-field .form-icon {
     color: var(--gray-500);
-    font-size: 20px;
+    font-size: 15px;
 }
 
 label {
@@ -259,9 +259,13 @@ input[type=text], input[type=email], input[type=password], select{
     border: 1px solid var(--gray-300);
     display: block;
     width: 100%;
-    padding: 6px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 6px;
     outline: none;
+}
+
+input[type=checkbox] {
+    accent-color: var(--primary-color);
 }
 
 /* DIVIDER  */

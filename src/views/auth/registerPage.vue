@@ -1,57 +1,79 @@
 <template>
   <div>
-    <div class="auth-container">
-      <div class="auth-content">
-        <div>
-          <!-- <img src="@/assets/img/jappa_logo.png" alt="" /> -->
-          <span>logo</span>
-        </div>
+    <div class="">
+      <div>
+        <!-- <img src="@/assets/img/jappa_logo.png" alt="" /> -->
+        <span>SAMZUGA GPT </span>
+      </div>
 
+      <div
+        class="auth-content tw-h-[90vh] tw-flex flex-column tw-justify-center"
+      >
         <div>
-          <h5 class="text-uppercase font-weight-bold text-center my-4">
-            create new account
-          </h5>
+          <div class="tw-mb-6">
+            <h3 class="tw-font-bold mb-0">Create Account</h3>
+            <span class="tw-text-sm"
+              >Already have an account?
+              <router-link to="/login" class="tw-text-primary"
+                >Login</router-link
+              >
+            </span>
+          </div>
           <form action="" @submit.prevent="login">
             <span v-if="error" class="mb-3 error-alert">{{ error }}</span>
-            <div>
-              <div class="mb-3">
+            <div class="tw-flex tw-space-x-6">
+              <div class="mb-3 tw-w-full">
                 <label for="">First Name</label>
-                  <input
-                    type="text"
-                    v-model="credentials.email"
-                    id="first_name"
-                    placeholder="First Name"
-                  />
+                <input
+                  type="text"
+                  v-model="credentials.email"
+                  id="first_name"
+                  placeholder="First Name"
+                />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 tw-w-full">
                 <label for="">Last Name</label>
-                  <input
-                    type="text"
-                    v-model="credentials.email"
-                    id="lastname"
-                    placeholder="Last Name"
-                  />
+                <input
+                  type="text"
+                  v-model="credentials.email"
+                  id="lastname"
+                  placeholder="Last Name"
+                />
               </div>
             </div>
 
             <div class="mb-3">
               <label for="">Email</label>
-                <input
-                  type="email"
-                  v-model="credentials.email"
-                  id="email"
-                  placeholder="Email"
-                />
+              <input
+                type="email"
+                v-model="credentials.email"
+                id="email"
+                placeholder="Email"
+              />
             </div>
 
-            <div class="mb-3">
+            <div class="tw-mb-3">
               <label for="">Password</label>
-                <input
-                  type="password"
-                  v-model="credentials.password"
-                  id="password"
-                  placeholder="Password"
-                />
+              <input
+                type="password"
+                v-model="credentials.password"
+                id="password"
+                placeholder="Password"
+              />
+            </div>
+
+            <div class="tw-mb-4 tw-flex align-center tw-space-x-2">
+              <input type="checkbox" name="" id="" />
+              <span class=" tw-text-sm">
+                I agree to Samzuga Gpt
+                <router-link to="/login" class="tw-text-primary"
+                  >Terms of service</router-link
+                >
+                and
+                <router-link to="/login" class="tw-text-primary"
+                  >Privacy policy</router-link
+                >
+              </span>
             </div>
 
             <div class="tw-mb-3">
@@ -71,10 +93,6 @@
                 <span v-else>create account</span>
               </button>
             </div>
-
-            <div class="tw-text-center">
-                <span class="tw-text-sm"><router-link to="/login" class="tw-text-secondary">Back to Login</router-link> </span>
-              </div>
           </form>
         </div>
       </div>
@@ -124,22 +142,6 @@ export default {
 </script>
 
 <style>
-.auth-container {
-  background-color: var(--gray-100);
-  min-height: 100vh;
-  display: grid;
-  display: -moz-grid;
-  display: -ms-grid;
-  place-items: center;
-}
-
-.auth-content {
-  background-color: var(--white-50);
-  padding: 30px;
-  border-radius: 8px;
-  width: 35%;
-}
-
 .auth-content h5 {
   font-weight: 900;
 }

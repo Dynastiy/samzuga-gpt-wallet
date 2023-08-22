@@ -1,16 +1,21 @@
 <template>
     <div>
-      <div class="auth-container">
-        <div class="auth-content">
-          <div>
+      <div class="">
+        <div>
             <!-- <img src="@/assets/img/jappa_logo.png" alt="" /> -->
             <span>logo</span>
           </div>
-  
+        <div class="auth-content tw-h-[80vh] tw-flex flex-column tw-justify-center">
           <div>
-            <h5 class="text-uppercase font-weight-bold text-center my-4">
-            user login
-            </h5>
+            <div class="tw-mb-6">
+            <h3 class="tw-font-bold mb-0">Welcome Back</h3>
+            <span class="tw-text-sm"
+              >Don't have an account?
+              <router-link to="/register" class="tw-text-primary"
+                >Sign Up</router-link
+              >
+            </span>
+          </div>
             <form action="" @submit.prevent="login">
               <span v-if="error" class="mb-3 error-alert">{{ error }}</span>
               <div class="tw-mb-3">
@@ -25,16 +30,21 @@
   
               <div class="tw-mb-3">
                 <label for="">Password</label>
-                  <input
-                    type="password"
+                  <div class="input-field">
+                    <input
+                    :type="typePassword ? 'password' : 'text' "
                     v-model="credentials.password"
                     id="password"
                     placeholder="Password"
                   />
+                  <span role="button" @click="typePassword = !typePassword">
+                    <i-icon :icon="typePassword ? 'tabler:eye' : 'gridicons:not-visible' " class="form-icon" />
+                  </span>
+                  </div>
               </div>
 
               <div class="tw-mb-3 tw-text-right">
-                <span class="tw-text-sm">Do not have an account? <router-link to="/register" class="tw-text-secondary">Register</router-link> </span>
+                <span class="tw-text-sm"><router-link to="/forgot-password" class="tw-text-primary">Forgot Password?</router-link> </span>
               </div>
   
               <div class="tw-mb-3">
@@ -51,12 +61,8 @@
                       class="text-white"
                     />
                   </span>
-                  <span v-else>sign in</span>
+                  <span v-else>Login</span>
                 </button>
-              </div>
-
-              <div class="tw-text-center">
-                <span class="tw-text-sm"><router-link to="/forgot-password" class="tw-text-secondary">Forgot Password?</router-link> </span>
               </div>
             </form>
           </div>
@@ -76,7 +82,8 @@
           password: "",
         },
         loading: false,
-        error: ""
+        error: "",
+        typePassword: true
       };
     },
     methods: {
@@ -109,22 +116,9 @@
   </script>
   
   <style>
-  .auth-container {
-    background-color: var(--gray-100);
-    min-height: 100vh;
-    display: grid;
-    display: -moz-grid;
-    display: -ms-grid;
-    place-items: center;
-  }
-  
   .auth-content {
-    background-color: var(--white-50);
-    padding: 30px;
-    border-radius: 8px;
-    width: 35%;
   }
-  
+
   .auth-content h5 {
     font-weight: 900;
   }

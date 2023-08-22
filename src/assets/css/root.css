@@ -1,6 +1,7 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css");
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 *,
 html {
     padding: 0;
@@ -32,19 +33,11 @@ html {
 
 :root {
     /* Primary Font Type */
-    --primary-font-family: 'Fira Sans', sans-serif;
+    --primary-font-family: 'Inter', sans-serif;
 
     /* Primary Theme  */
-    --primary-bg: #e6e0eb;
-    --primary-100: #D3E1FF;
-    --primary-200: #A6C4FE;
-    --primary-400: #7AA6FE;
-    --primary-400: #4E88FD;
-    --primary-500: #216BFD;
-    --primary-600: #0251EF;
-    --primary-700: #0242C3;
-    --primary-800: #023396;
-    --primary-900: #012369;
+    --primary-color: #991926;
+    --secondary-color: #D8B0B1;
 
      /* Gray Theme  */
      --gray-50: #F9FAFB;
@@ -57,17 +50,6 @@ html {
      --gray-700: #374151;
      --gray-800: #1F2937;
      --gray-900: #111827;
-
-    /* Secondary Theme  */
-    --secondary-100: #FFDBD1;
-    --secondary-200: #FFDBD1;
-    --secondary-300: #FFCAB9;
-    --secondary-400: #FFB8A2;
-    --secondary-500: #FFA68B;
-    --secondary-600: #FF9474;
-    --secondary-700: #FF825C;
-    --secondary-800: #FF7145;
-    --secondary-900: #FF5C2C;
 
      /* Yellow Scheme  */
      --yellow-50: #FFFCE6;
